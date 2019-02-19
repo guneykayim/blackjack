@@ -4,15 +4,17 @@
 #include <vector>
 #include "card.hpp"
 
-class Deck {
-public:
-  Deck();
-  void shuffle();
-  Card dealCard();
-  int cardsLeft() const;
-private:
-  std::vector<Card> cards;
-  int dealIndex { 0 };
-};
+namespace CardGame {
+  class Deck {
+  public:
+    Deck();
+    void shuffle();
+    Card dealCard();
+    int cardsLeft() const;
+  private:
+    std::vector<Card> cards;
+    int dealIndex { 0 };
+  };
+}
 
 #endif // DECK_HPP_
