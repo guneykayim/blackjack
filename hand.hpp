@@ -11,7 +11,7 @@ namespace CardGame {
     virtual int getScore() const = 0;
     virtual void reset();
     virtual ~Hand() = default;
-  private:
+  protected:
     std::vector<Card*> cards;
   };
 }
