@@ -9,11 +9,12 @@ namespace CardGame {
   public:
     Deck();
     void shuffle();
-    Card dealCard();
+    Card& dealCard();
     int cardsLeft() const;
   private:
     std::vector<Card> cards;
     int dealIndex { 0 };
+    Card voidCard { };
   };
 }
 

@@ -20,11 +20,11 @@ namespace CardGame {
     }
   }
 
-  Card Deck::dealCard() {
+  Card& Deck::dealCard() {
     if(this->dealIndex < this->cards.size()) {
       return this->cards[this->dealIndex++];
     } else {
-      return Card();
+      return this->voidCard;
     }
   }
 
