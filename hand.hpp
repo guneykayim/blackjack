@@ -8,7 +8,7 @@ namespace CardGame {
   class Hand {
   public:
     virtual void addCard(Card& card);
-    virtual int getScore() const;
+    virtual int getScore() const = 0;
     virtual void reset();
     virtual ~Hand() = default;
   private:
