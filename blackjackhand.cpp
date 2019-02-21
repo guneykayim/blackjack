@@ -6,4 +6,12 @@ namespace CardGame {
       //TODO implement me
       return v;
     }
+
+    bool BlackjackHand::isBlackJack() const {
+      return this->cards.size() == 2 && this->getScore() == this->blackjack;
+    }
+
+    bool BlackjackHand::isBusted() const {
+      return this->getScore() > this->blackjack;
+    }
 }

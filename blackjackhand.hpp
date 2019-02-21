@@ -7,6 +7,8 @@ namespace CardGame {
   class BlackjackHand : public Hand {
   public:
     int getScore() const override;
+    bool isBlackJack() const;
+    bool isBusted() const;
   private:
     static constexpr unsigned blackjack { 21 };
   };
