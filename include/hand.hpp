@@ -9,6 +9,7 @@ namespace CardGame {
   public:
     virtual void addCard(Card& card);
     virtual int getScore() const = 0;
+    virtual std::vector<Card*>& getCards();
     virtual void reset();
     virtual ~Hand() = default;
   protected:

@@ -8,6 +8,14 @@ namespace CardGame {
     return this->value;
   }
 
+  std::string Card::getStringValue() const {
+    if(this->value > 1 && this-> value < 11) {
+      return std::to_string(this->value);
+    } else {
+      return valueStrings.at(this->value);
+    }
+  }
+
   Suite Card::getSuite() const {
     return this->suite;
   }
@@ -22,7 +30,7 @@ namespace CardGame {
 
   std::ostream& operator<<(std::ostream &stream, const Card &card) {
     if (card.isValid()) {
-      stream << std::to_string(card.getValue()) << " of " << card.getSuiteName();
+      stream << card.getStringValue() << " of " << card.getSuiteName();
     } else {
       stream << "Invalid Card!";
     }
