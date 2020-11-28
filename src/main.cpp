@@ -36,7 +36,7 @@ int main() {
   hand.addCard(c3);
 
   cout << "Score in the hand: " << hand.getScore() << endl;
-  cout << "Is it BlackJack? " << ((hand.isBlackJack())? "Yes" : "No") << endl;
+  cout << "Is it Blackjack? " << ((hand.isBlackjack())? "Yes" : "No") << endl;
   cout << "Is it busted? " << ((hand.isBusted())? "Yes" : "No") << endl;
 
   cout << "\nResetting the hand" << endl;
@@ -52,7 +52,7 @@ int main() {
     cout << (*c) << endl;
   }
   cout << "Score in the hand: " << hand.getScore() << endl;
-  cout << "Is it BlackJack? " << ((hand.isBlackJack())? "Yes" : "No") << endl;
+  cout << "Is it Blackjack? " << ((hand.isBlackjack())? "Yes" : "No") << endl;
   cout << "Is it busted? " << ((hand.isBusted())? "Yes" : "No") << endl;
 
   return 0;

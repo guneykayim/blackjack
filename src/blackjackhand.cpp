@@ -28,7 +28,7 @@ namespace CardGame {
       return score;
     }
 
-    bool BlackjackHand::isBlackJack() const {
+    bool BlackjackHand::isBlackjack() const {
       return this->cards.size() == 2 && this->getScore() == this->blackjack;
     }
 
