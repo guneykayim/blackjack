@@ -1,4 +1,4 @@
-# BlackJack
+# Blackjack
 
 
 [![Repo Status](https://img.shields.io/badge/repo--status-under--development-orange)](https://github.com/guneykayim/blackjack)
@@ -16,8 +16,8 @@ cmake ..
 make -j4
 ```
 
-## Running
+## Running the tests
 
 ```sh
-./blackjack
+./test/Blackjack_test 
 ```
