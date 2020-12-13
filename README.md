@@ -19,5 +19,5 @@ make -j4
 ## Running the tests
 
 ```sh
-./test/Blackjack_test 
+./bin/Blackjack_test 
 ```
