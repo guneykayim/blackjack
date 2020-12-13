@@ -2,7 +2,9 @@
 
 namespace CardGame {
   void Hand::addCard(Card& card) {
-    this->cards.emplace_back(&card);
+    if(card.isValid()) {
+      this->cards.emplace_back(&card);
+    }
   }
 
   std::vector<Card*>& Hand::getCards() {
