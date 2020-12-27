@@ -7,28 +7,28 @@ namespace CardGame {
   Deck::Deck() {
     for (int s = 0; s <=3; ++s) {
       for (uint8_t v = 1; v <= 13; ++v) {
-        this->cards.emplace_back(Card { v, static_cast<Suite>(s) });
+        _cards.emplace_back(Card { v, static_cast<Suite>(s) });
       }
     }
   }
 
   void Deck::shuffle() {
-    if(this->dealIndex < this->cards.size()) {
+    if(_dealIndex < _cards.size()) {
       unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
       std::default_random_engine rng { seed };
-      std::shuffle(this->cards.begin() + this->dealIndex, this->cards.end(), rng);
+      std::shuffle(_cards.begin() + _dealIndex, _cards.end(), rng);
     }
   }
 
   Card& Deck::dealCard() {
-    if(this->dealIndex < this->cards.size()) {
-      return this->cards[this->dealIndex++];
+    if(_dealIndex < _cards.size()) {
+      return _cards[_dealIndex++];
     } else {
-      return this->voidCard;
+      return _voidCard;
     }
   }
 
   int Deck::cardsLeft() const {
-    return this->cards.size() - this->dealIndex;
+    return _cards.size() - _dealIndex;
   }
 }

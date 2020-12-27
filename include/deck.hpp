@@ -12,9 +12,9 @@ namespace CardGame {
     Card& dealCard();
     int cardsLeft() const;
   private:
-    std::vector<Card> cards;
-    int dealIndex { 0 };
-    Card voidCard { };
+    std::vector<Card> _cards;
+    int _dealIndex { 0 };
+    Card _voidCard { };
   };
 }
 

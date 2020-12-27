@@ -5,7 +5,7 @@ namespace CardGame {
       int score { 0 };
       int numAces { 0 };
 
-      for(Card* c : this->cards) {
+      for(Card* c : _cards) {
         auto v = std::min<uint8_t>(10, c->getValue());
         if(v == 1) { // ace
           ++numAces;
@@ -19,7 +19,7 @@ namespace CardGame {
       } else {
         if(numAces > 0) {
           score += 11 + numAces - 1;
-          if(score > this->blackjack) {
+          if(score > _blackjack) {
             score -= 10;
           }
         }
@@ -29,10 +29,10 @@ namespace CardGame {
     }
 
     bool BlackjackHand::isBlackjack() const {
-      return this->cards.size() == 2 && this->getScore() == this->blackjack;
+      return _cards.size() == 2 && this->getScore() == _blackjack;
     }
 
     bool BlackjackHand::isBusted() const {
-      return this->getScore() > this->blackjack;
+      return this->getScore() > _blackjack;
     }
 }

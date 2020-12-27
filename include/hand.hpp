@@ -13,7 +13,7 @@ namespace CardGame {
     virtual void reset();
     virtual ~Hand() = default;
   protected:
-    std::vector<Card*> cards;
+    std::vector<Card*> _cards;
   };
 }
 

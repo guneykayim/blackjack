@@ -3,15 +3,15 @@
 namespace CardGame {
   void Hand::addCard(Card& card) {
     if(card.isValid()) {
-      this->cards.emplace_back(&card);
+      _cards.emplace_back(&card);
     }
   }
 
   std::vector<Card*>& Hand::getCards() {
-    return this->cards;
+    return _cards;
   }
 
   void Hand::reset() {
-    this->cards.clear();
+    _cards.clear();
   }
 }

@@ -10,7 +10,7 @@ namespace CardGame {
     bool isBlackjack() const;
     bool isBusted() const;
   private:
-    static constexpr unsigned blackjack { 21 };
+    static constexpr unsigned _blackjack { 21 };
   };
 }
 

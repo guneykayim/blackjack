@@ -21,9 +21,9 @@ namespace CardGame {
     bool isValid() const;
     friend std::ostream& operator<<(std::ostream &stream, const Card &card);
   private:
-    uint8_t value { };
-    Suite suite { };
-    bool initialized { false };
+    uint8_t _value { };
+    Suite _suite { };
+    bool _initialized { false };
   };
 }
 
