@@ -29,10 +29,10 @@ namespace CardGame {
     }
 
     bool BlackjackHand::isBlackjack() const {
-      return _cards.size() == 2 && this->getScore() == _blackjack;
+      return _cards.size() == 2 && getScore() == _blackjack;
     }
 
     bool BlackjackHand::isBusted() const {
-      return this->getScore() > _blackjack;
+      return getScore() > _blackjack;
     }
 }

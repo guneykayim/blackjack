@@ -9,6 +9,23 @@ namespace CardGame {
         initDecks(deckType);
     }
 
+    BlackjackDeck::BlackjackDeck(const BlackjackDeck &another) {
+        _numDecks = another._numDecks;
+        _decks = another._decks;
+        _distr = another._distr;
+    }
+
+    BlackjackDeck& BlackjackDeck::operator=(const BlackjackDeck &another) {
+        if(this == &another) {
+            return *this;
+        }
+        _numDecks = another._numDecks;
+        _decks = another._decks;
+        _distr = another._distr;
+
+        return *this;
+    }
+
     void BlackjackDeck::initDecks(BlackjackDeckType deckType) {
         _numDecks = static_cast<int>(deckType);
         _rng = std::mt19937(_rd());

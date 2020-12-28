@@ -12,6 +12,9 @@ namespace CardGame {
     public:
         BlackjackDeck();
         BlackjackDeck(BlackjackDeckType deckType);
+        BlackjackDeck(const BlackjackDeck &);
+        BlackjackDeck& operator=(const BlackjackDeck &);
+
         Card& dealCard();
         int cardsLeft() const;
 
